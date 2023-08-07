@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Roboto', sans-serif ;
+  /* font-family: 'Baloo Bhai 2', cursive;
+font-family: 'Bree Serif', serif;
+font-family: 'Roboto', sans-serif; */
+}
+.container {
+  background-color: rgb(174, 174, 218);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 1rem;
+}
+.container .card {
+  flex: 1;
+  padding: 1.5rem;
+  font-size: 1 rem;
+  border-radius: 0.5rem;
+  align-items: center;
+  background-color: azure;
+  width: 48%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: auto;
+  line-height: 2.1rem;
+}
+.card-buttons {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.card-buttons a {
+  text-decoration: none;
+}
+.card P{
+  color: rgb(121, 121, 115);
+}
+table,
+tr,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
