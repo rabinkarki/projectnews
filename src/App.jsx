@@ -8,10 +8,9 @@ import "./index.css";
 import Search from "./components/search.jsx";
 
 function App() {
-  
   return (
     <>
-    <Header />
+      <Header />
       <Search />
     </>
   );
