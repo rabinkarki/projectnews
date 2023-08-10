@@ -8,11 +8,11 @@ let api = "https://hn.algolia.com/api/v1/search?";
 const iniitialState = {
   isloading: true,
   query: "",
-  nbpages: 0,
+  nbPages: 0,
   page: 0,
   hits: [],
 };
-const AppProvider = () => {
+const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, iniitialState);
 
   const fetchData = async (url) => {
@@ -24,7 +24,7 @@ const AppProvider = () => {
         type: "disp_stories",
         payload: {
           hits: data.hits,
-          // nbpages:data.nbpages,
+          nbPages: data.nbPages,
         },
       });
       console.log(data);
@@ -38,13 +38,21 @@ const AppProvider = () => {
   function Searchquery(elem_quer) {
     dispatch({ type: "search_que", payload: elem_quer });
   }
+  function getprevPage() {
+    dispatch({ type: "prev_pag" });
+  }
+  function getnextPage() {
+    dispatch({ type: "Next_pag" });
+  }
   useEffect(() => {
     fetchData(`${api}query=${state.query}&page=${state.page} `);
   }, [state.query]);
 
   return (
-    <context.Provider value={{ ...state, Removepost, Searchquery }}>
-      <App />
+    <context.Provider
+      value={{ ...state, Removepost, Searchquery, getprevPage, getnextPage }}
+    >
+      {children}
     </context.Provider>
   );
 };

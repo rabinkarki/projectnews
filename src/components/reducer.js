@@ -12,6 +12,7 @@ const reducer = (state, action) => {
         ...state,
         isloading: false,
         hits: action.payload.hits,
+        nbPages: action.payload.nbPages,
       };
     case "Remove_post":
       return {
@@ -24,6 +25,16 @@ const reducer = (state, action) => {
       return {
         ...state,
         query: action.payload,
+      };
+    case "prev_pag":
+      return {
+        ...state,
+        page: state.page - 1,
+      };
+    case "Next_pag":
+      return {
+        ...state,
+        page: state.page + 1,
       };
   }
 

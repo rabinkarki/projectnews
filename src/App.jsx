@@ -6,11 +6,13 @@ import Header from "./components/header";
 import React from "react";
 import "./index.css";
 import Search from "./components/search.jsx";
+import Pagination from "./components/pagination";
 
 function App() {
   return (
     <>
       <Header />
+      <Pagination />
       <Search />
     </>
   );
