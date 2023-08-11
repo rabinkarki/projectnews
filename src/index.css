@@ -71,7 +71,36 @@ form {
 input {
   width: 100%;
   padding: 0.7rem;
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   border: none;
   outline: none;
+}
+.page-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.page-btn button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  color: azure;
+  font-weight: 500;
+
+  background-color: #10033f;
+  cursor: pointer;
+}
+.page-btn p{
+  margin:10px 10px;
+  
+}
+@media screen and (max-width: 768px) {
+  .container{
+    width: 100%;
+  }
+  .container .card{
+    width: 70%;
+    margin:auto;
+  }
 }

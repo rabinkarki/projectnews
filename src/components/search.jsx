@@ -15,8 +15,8 @@ const Search = () => {
       <div className="container">
         {hits.map((data) => {
           return (
-            <>
-              <div className="card">
+            
+              <div className="card" key={data.objectID}>
                 <h3>{data.title}</h3>
                 <p>
                   By {data.author} | {data.num_comments}Comments
@@ -34,7 +34,7 @@ const Search = () => {
                   </a>
                 </div>
               </div>
-            </>
+          
           );
         })}
       </div>
