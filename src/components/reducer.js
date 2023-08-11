@@ -27,13 +27,13 @@ const reducer = (state, action) => {
         query: action.payload,
       };
     case "prev_pag":
-      let prev=state.page-1;
-      if (prev<=0){
-          prev=0;
+      let prev = state.page - 1;
+      if (prev <= 0) {
+        prev = 0;
       }
       return {
         ...state,
-        page:prev,
+        page: prev,
       };
     case "Next_pag":
       return {

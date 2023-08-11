@@ -46,7 +46,7 @@ const AppProvider = ({ children }) => {
   }
   useEffect(() => {
     fetchData(`${api}query=${state.query}&page=${state.page} `);
-  }, [state.query,state.page]);
+  }, [state.query, state.page]);
 
   return (
     <context.Provider
