@@ -54,14 +54,22 @@ td {
 }
 h1 {
   text-align: center;
+  margin-left: 500px;
   margin-bottom: 10px;
-  color: rgb(97, 88, 88);
+  color: rgb(10, 9, 9);
 }
 .center {
   width: 30%;
 }
-form {
+.head-1 {
   display: flex;
+  justify-content: space-between;
+}
+.head-1 div {
+  display: flex;
+  align-items: center;
+}
+form {
   justify-content: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 30%;
@@ -80,7 +88,7 @@ input {
   justify-content: center;
   margin-top: 10px;
 }
-.page-btn button {
+button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -94,7 +102,11 @@ input {
 .page-btn p {
   margin: 10px 10px;
 }
-@media screen and (max-width: 768px) {
+
+li {
+  list-style-type: none;
+}
+@media screen and (max-width: 1067px) {
   .container {
     width: 100%;
   }
@@ -104,6 +116,22 @@ input {
   }
   form {
     width: 60%;
+  }
+  h1 {
+    margin: auto;
+    margin-bottom: 10px;
+    color: rgb(10, 9, 9);
+    white-space: nowrap;
+    font-size: 1.3rem;
+  }
+
+  .center {
+    width: 30%;
+  }
+
+  div li button {
+    font-size: 0.7rem;
+    padding: 0.3rem;
   }
 }
 @media screen and (max-width: 480px) {
@@ -116,6 +144,18 @@ input {
     margin: auto;
   }
   form {
-    width: 80%;
+    width: 75%;
+  }
+
+  div li button {
+    font-size: 0.5rem;
+    padding: 0.3rem;
+  }
+  h1 {
+    margin: auto;
+    margin-bottom: 10px;
+    color: rgb(10, 9, 9);
+    white-space: nowrap;
+    font-size: 1.1rem;
   }
 }
